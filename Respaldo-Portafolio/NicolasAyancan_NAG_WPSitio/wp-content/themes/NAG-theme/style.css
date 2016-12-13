@@ -1,0 +1,690 @@
+/*
+Theme Name: NAG portfolio
+Theme URI: http://nicolas.ayancan.laboratoriodiseno.cl/NAG/
+Description: Personal template for web portfolio
+Author: N. (@NAG)
+Author URI: http://nicolas.ayancan.laboratoriodiseno.cl/NAG/
+Version: 2.1.8
+License: GNU General Public License
+Tags: HTML5, CSS3, PHP, JS, Bootstrap, personal, portfolio, portafolio, diseño, desarrollo
+*/
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font: 16px;
+}
+
+/*GENERAL*/
+body{
+    font-family: 'ralewaylight';
+    color: white;
+    background-color: #FFF;
+}
+
+a,
+a:hover,
+a:active,
+a:link,
+a:visited,
+button,
+button:hover,
+button:active,
+button:link,
+button:visited{
+    color: inherit;
+    text-decoration: none;
+    -webkit-transition: 0.4s ease;
+    transition: 0.4s ease;
+    outline: 0;
+}
+
+.container-fluid,
+section,
+.form-group{
+    overflow: hidden;
+}
+
+strong{
+    font-family: "ralewaybold";
+}
+
+::selection{
+    background: black;
+    color: #d6ac48;
+}
+
+/*HEADER*/
+.navbar{
+    padding: 5px 0;
+    background-color: black;
+}
+.navbar-brand img{
+    width: 80px;
+    padding: 0;
+}
+.navbar-brand{
+    overflow: hidden;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+.navbar-tr{
+    background-color: transparent;
+    border-bottom: 1px solid transparent;
+}
+.navbar .navbar-toggle{
+    border: 1px solid #d6ac48;
+}
+.navbar .navbar-toggle:hover{
+    background-color: #d6ac48;
+}
+.navbar .nav li{
+    border-bottom: 1px solid transparent;
+    -webkit-transition: 0.4s ease-in;
+    transition: 0.4s ease-in;
+}
+.nav li a,
+.collapse .nav .nav-selected a,
+.nav li.current-menu-item a{
+    color: white;
+}
+.nav li:hover,
+.navbar .nav .nav-selected,
+.nav li.current-menu-item{
+    border-bottom: 1px solid #d6ac48;
+}
+
+.nav .wg-li,
+.nav .wg-li:hover{
+    border-bottom: 1px solid transparent;
+}
+
+.nav .wg-li.wgcurrent a{
+    color: #d6ac48;
+}
+
+/*MAIN*/
+#main,
+.back-proceso,
+.mercado{
+    overflow: hidden;
+    position: relative;
+}
+
+.main{
+    position: relative;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 2;
+    color: white;
+    height: 100vh;
+    -webkit-transition: all 5s ease;
+    transition: all 5s ease;
+    overflow: hidden;
+}
+
+body:hover .wrap{
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+}
+body:hover .main{
+    background-color: rgba(0,0,0,0.8);
+    -webkit-transition: 5s ease;
+    transition: 5s ease;
+}
+
+#main .main-img{
+    overflow: hidden;
+    padding: 8% 0 0 0;
+}
+#main .main-title{
+    font-family: 'ralewaylight';
+    font-size: 3em;
+    text-transform: uppercase;
+}
+#main .main-subtitle{
+    font-family: 'ralewaythin';
+}
+
+.rs-list{
+    padding: 10px 0;
+}
+.rs-list a{
+    font-size: 2em;
+    text-decoration: none;
+    color: white;
+    border-radius: 100%;
+    border: 1px solid #d6ac48;
+    padding: 14px;
+    width: 2em;
+    height: 2em;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+}
+.rs-list a:hover{
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    border-color: transparent;
+    color: #d6ac48;
+}
+
+.main-btn,
+.inner-btn{
+    margin-top: 1%;
+    background-color: transparent;
+    border: 1px solid #d6ac48;
+    transition: 0.4s ease;
+    padding: 10px 0;
+    text-transform: uppercase;
+    font-family: 'ralewaybold';
+    -webkit-transition: 0.4s ease;
+    transition: 0.4s ease;
+}
+.main-btn:hover,
+.inner-btn:hover{
+    background-color: #d6ac48;
+    color: black;
+    -webkit-transform: scale(1.03);
+    transform: scale(1.03);
+}
+
+/*INNER*/
+.inner-main{
+    position: relative;
+    overflow: hidden;
+    padding: 50px 0;
+    margin-top: 50px;
+}
+.inner-title{
+    border-bottom: 1px solid #d6ac48;
+    text-transform: uppercase;
+    color: black;
+    font-family: 'ralewaybold';
+    font-size: 3em;
+}
+.inner-subtitle{
+    border-bottom: 1px solid #d6ac48;
+    text-transform: uppercase;
+    font-family: 'ralewaybold';
+    font-size: 2em;
+}
+
+/*ABOUT*/
+.about{
+    position: relative;
+    padding: 40px 0;
+    overflow: hidden;
+    color: black;
+}
+.about .about-img img{
+    border: 1px solid #d6ac48;
+}
+.about .about-par{
+    margin-top: 30px;
+    padding: 10px;
+    border: 1px solid #d6ac48;
+}
+.about .bio-link{
+    color: #d6ac48;
+}
+.about .bio-link:hover{
+    text-decoration: line-through;
+}
+
+/*about>PROCESO*/
+.proceso{
+    position: relative;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 4;
+    color: white;
+    overflow: hidden;
+    padding: 40px 0 50px 0;
+}
+.wrap-about{
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    background: url('../img/about-proceso.jpeg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    z-index: -1;
+    -webkit-transition: 5s ease;
+    transition: 5s ease;
+    overflow: hidden;
+}
+/*BACKGROUND SCALE*/
+.back-proceso:hover .wrap-about,
+.mercado:hover .wrap-mercado,
+.main-project:hover .wrap-project,
+.project-info:hover .wrap-pinfo{
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    -webkit-transition: 5s ease;
+    transition: 5s ease;
+}
+.proceso .inner-subtitle{
+    color: white;
+}
+.proceso .proceso-container{
+    padding: 40px 10px 0 10px;
+}
+.proceso .proceso-container img{
+    width: 60%;
+    margin: 0 auto;
+}
+.proceso .proceso-title{
+    color: #d6ac48;
+    font-family: 'ralewayregular';
+}
+.proceso .proceso-par{
+    font-family: 'ralewaythin';
+}
+
+.inner-par{
+    font-size: 1.1em;
+    line-height: 1.5em;
+    font-family: 'ralewaylight';
+}
+
+/*about>CONOCIMIENTOS*/
+.conocimientos{
+    padding: 40px 0;
+    color: black;
+    overflow: hidden;
+    cursor: pointer;
+}
+.conocimiento-title{
+    font-family: 'ralewaybold';
+}
+.conocimientos img:hover{
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+    -webkit-transition: 0.4s ease;
+    transition: 0.4s ease;
+}
+
+/*SERVICIOS*/
+.diseno,
+.desarrollo{
+    overflow: hidden;
+    color: black;
+}
+.sector{
+    padding: 40px 0 0 0;
+}
+.diseno{
+    background-color: white;
+}
+.desarrollo{
+    background-color: white;
+}
+.sector-img{
+    padding: 0;
+}
+.sector-img img{
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+.sector-par{
+    padding: 20px;
+}
+.sector-title{
+    margin: auto 20px auto 20px;
+    padding: 20px 0;
+    border-bottom: 1px solid #d6ac48;
+    font-family: 'ralewaybold';
+}
+.mercado-cont{
+    position: relative;
+    background-color: rgba(255,255,255,0.6);
+    z-index: 4;
+    color: black;
+    overflow: hidden;
+    padding: 40px 0;
+}
+.mercado-par{
+    padding: 30px 0;
+    font-family: 'ralewayregular';
+}
+
+/*PORTFOLIO*/
+.portfolio{
+    overflow: hidden;
+    padding: 30px 0 60px 0;
+}
+.portfolio-proj{
+    padding: 0;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+}
+.portfolio-proj img{
+    -webkit-transition: 2s ease-out;
+    transition: 2s ease-out;
+}
+.portfolio-proj:hover img{
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    -webkit-transition: 2s ease-in;
+    transition: 2s ease-in;
+}
+.portfolio-proj:hover figcaption{
+    background-color: rgba(0,0,0,0.6);
+    -webkit-transition: 2s ease;
+    transition: 2s ease;
+}
+.portfolio-proj figcaption{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+    padding: 15% 0 0 0;
+}
+.portfolio-proj .portfolio-title{
+    padding: 10px;
+    text-transform: uppercase;
+    border-bottom: 1px solid #d6ac48;
+    font-size: 2em;
+    font-family: 'ralewaybold';
+}
+.portfolio-proj .inner-btn{
+    margin-top: 10%;
+}
+.portfolio-btn{
+    padding: 10px 0 50px 0;
+    overflow: hidden;
+}
+.portfolio-btn .bg-btn{
+    color: black;
+    font-size: 1.5em;
+    font-family: 'ralewaybold';
+}
+.portfolio-btn .bg-btn:hover{
+    color: white;
+}
+
+/*project*/
+
+.main-project{
+    position: relative;
+    overflow: hidden;
+}
+.project{
+    padding: 0;
+    height: 100vh;
+    position: relative;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 4;
+    color: white;
+    overflow: hidden;
+    padding: 40px 0;
+}
+.project-title{
+    font-family: 'ralewaybold';
+    text-transform: uppercase;
+    font-size: 3em;
+    padding-top: 8%;
+    border-bottom: 1px solid #d6ac48;
+}
+.project-link{
+    margin: 20px 0;
+}
+.project-link a span{
+    padding: 10px 11px;
+    border-radius: 50px;
+    border: 1px solid #d6ac48;
+    font-size: 2em;
+    color: white;
+    -webkit-transition: 0.4s ease;
+    transition: 0.4s ease;
+    margin: 0 10px;
+}
+.project-link a span:hover{
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    border-color: transparent;
+    color: #d6ac48;
+}
+.project-tags{
+    padding: 10px 0;
+}
+.project-tags li{
+    margin: 10px 0;
+}
+.project-tags li a{
+    padding: 10px;
+    text-transform: uppercase;
+    font-family: 'ralewaylight';
+    color: white;
+    text-decoration: none;
+    border: 1px solid #d6ac48;
+    -webkit-transition: 0.4s ease;
+    transition: 0.4s ease;
+}
+/*solve*/
+.project-tags li a:hover{
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    -webkit-transition: 0.4s ease;
+    transition: 0.4s ease;
+    background-color: #d6ac48;
+    color: black;
+}
+.project-date{
+    padding: 20px 0;
+    font-size: 1.2em;
+    font-family: 'ralewaythin';
+}
+.project-date span{
+    color: #d6ac48;
+}
+
+.project-description{
+    padding: 30px 0;
+    color: black;
+}
+.title-description{
+    padding: 10px 0;
+    font-family: 'ralewaybold';
+    text-transform: uppercase;
+}
+.content-description{
+    overflow: hidden;
+    padding: 20px 10px;
+    border: 1px solid #d6ac48;
+}
+#slider{
+    padding: 0;
+}
+#slider img{
+    width: 100%;
+}
+.project-info{
+    position: relative;
+}
+.project-data{
+    position: relative;
+    z-index: 4;
+    color: white;
+    overflow: hidden;
+    padding: 40px 0;
+    background-color: rgba(255,255,255,0.6);
+}
+.wrap-pinfo{
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    background: url(../img/servicios-tiempos.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    z-index: -1;
+    -webkit-transition: 5s ease;
+    transition: 5s ease;
+    overflow: hidden;
+}
+.project-info h2{
+    color: black;
+}
+.project-info .container{
+    padding: 50px 0; 
+    color: black;
+}
+.pdata h4{
+    padding: 20px;
+    border: 1px solid #d6ac48;
+    cursor: pointer;
+    font-family: 'ralewaybold';
+}
+.pdata h4:hover{
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    -webkit-transition: 0.4s ease;
+    transition: 0.4s ease;
+    border: 1px solid transparent;
+    color: #d6ac48;
+}
+
+/*contacto*/
+.contacto{
+    padding: 30px 0 60px 0;
+}
+.contacto .title-description{
+    color: black;
+    padding: 0;
+}
+.contacto p{
+    color: black;
+}
+.contacto .rrss a{ 
+    color: black;
+}
+.contacto .rrss a:hover{
+    color:#d6ac48;
+}
+
+.contacto .mensaje,
+.contacto .formulario{
+    padding: 20px;
+}
+
+.contacto .formulario{
+    border: 1px solid #d6ac48;
+}
+.contacto input,
+.contacto textarea{
+    border-radius: 0;
+    border: 1px solid black;
+    font-size: 1em;
+    font-family: 'ralewaylight';
+    resize: none;
+}
+.contacto input:focus,
+.contacto textarea:focus{
+    border-color: #d6ac48;
+    outline: 0;
+}
+.contacto .form-group,
+.contacto .form-group:focus{
+    outline: 0;
+}
+.contacto .inner-btn{
+    color: black;
+    font-size: 1.2em;
+}
+
+.contacto .inner-btn:hover{
+    color: white;
+}
+
+/*footer*/
+footer{
+    padding: 0;
+    background-color: black;
+    overflow: hidden;
+}
+footer .copyright{
+    padding: 30px 0 0 0;
+    font-family: 'ralewayregular';
+}
+footer .copyright a{
+    font-family: 'ralewaythin';
+    padding: 0 2px;
+    color: #d6ac48;
+    -webkit-transition: 0.4s ease;
+    transition: 0.4s ease;
+}
+footer .copyright a:hover{
+    text-decoration: line-through;
+    -webkit-transition: 0.4s ease-in;
+    transition: 0.4s ease-in;
+}
+footer .rrss .rs-list{
+    padding: 10px 0 0 0;
+}
+footer .top{
+    padding: 10px 0 0 0;
+}
+footer .top a span{
+    padding: 10px 15px;
+    border-radius: 50px;
+    border: 1px solid #d6ac48;
+    font-size: 2em;
+    color: white;
+    transition: 0.4s ease;
+}
+footer .top a span:hover{
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    border-color: transparent;
+    color: #d6ac48;
+}
+
+header .lang a{
+    margin: 15px 10px;
+    padding: 0;
+    color: white;
+}
+
+header .lang a:hover{
+    color: white;
+    text-decoration: none;
+}
+
+header .lang a span{
+    color: white;
+    padding: 5px;
+}
+
+header .lang:hover{
+    border-bottom: 1px solid transparent;
+}
+
+header .lang a .lang-selected,
+header .lang span:hover{
+    color: #d6ac48;
+}
+
+/*wp*/
+
+.lang-wp{
+    position: absolute;
+    z-index: 5000000;
+}
+
+#footer{
+    display: none;
+}
+
+.img-wp{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
